@@ -408,7 +408,7 @@ public class PrinterCommand {
      */
     public static byte[] getBarCodeCommand(String str, int nType, int nWidthX, int nHeight,
                                            int nHriFontType, int nHriFontPosition) {
-
+        // if (nType < 0x41 | nType > 0x49 | nWidthX < 2 | nWidthX > 6
         if (nType < 0x41 | nType > 0x49 | nWidthX < 1 | nWidthX > 6
                 | nHeight < 1 | nHeight > 255 | str.length() == 0)
             return null;
